@@ -11,7 +11,8 @@ body, html{
     
   }
 
-  .breadcrumb{
+
+.breadcrumb{
     background-color: #f0f0f0;
 }
 
@@ -123,6 +124,8 @@ footer .copyright a,
     margin-top: 5rem;
 }
 
+
+
 #page_top{
     width: 100px;
     height: 60px;
@@ -172,6 +175,7 @@ footer .copyright a,
     width: 100%;
     display: block;
   }
+  
   
 }
 

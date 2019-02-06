@@ -1,0 +1,276 @@
+body, html{
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar{
+    border-bottom: 4px solid #65b9da;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.jumbotron {
+    background-color: #65b9da;
+    color: #fff;
+  }
+
+.fa-css3{
+    color: #007ee5;
+}
+
+.selector-img img{
+    max-width: 100%;
+}
+
+.text1{
+    font-size: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.text1 span{
+    font-size: 3rem;
+}
+
+.selector-img{
+    margin-bottom: 3rem;
+    margin-bottom: 3rem;
+}
+
+.consider{
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.text-1{
+    font-size: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.text-2{
+    font-weight: 600;
+}
+
+/* desert scheme ported from vim to google prettify */
+pre.prettyprint { display: block; background-color: #333 }
+pre .nocode {color: #000 }
+pre .str { color: #ffa0a0 } /* string  - pink */
+pre .kwd { color: #f0e68c; font-weight: bold }
+pre .com { color: #87ceeb } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type    - lightgreen */
+pre .lit { color: #cd5c5c } /* literal - darkred */
+pre .pun { color: #fff }    /* punctuation */
+pre .pln { color: #fff }    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal         - lightgreen */
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+@media print {
+  
+  pre .str, code .str { color: #060 }
+  pre .kwd, code .kwd { color: #006; font-weight: bold }
+  pre .com, code .com { color: #600; font-style: italic }
+  pre .typ, code .typ { color: #404; font-weight: bold }
+  pre .lit, code .lit { color: #044 }
+  pre .pun, code .pun { color: #440 }
+  pre .pln, code .pln { color: #000 }
+  pre .tag, code .tag { color: #006; font-weight: bold }
+  pre .atn, code .atn { color: #404 }
+  pre .atv, code .atv { color: #060 }
+}
+
+#selectors-type{
+    border-top: 3px solid #65b9da;
+    margin-top: 7rem;    
+    margin-bottom: 7rem;
+}
+
+.text-3 h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 4rem;
+}
+
+.text-3 p{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: .5px;
+}
+
+.text-3-choice li{
+    margin-bottom: 1rem;
+    letter-spacing: .5px;
+}
+
+.text-3-choice li span{
+    font-weight: 700;
+}
+
+#link-selectors{
+    border-top: 3px solid #65b9da;
+    margin-bottom: 4rem;
+}
+
+.text-5 h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 4rem;
+}
+
+.text-5 p{
+    font-size: 1rem;
+    letter-spacing: .5px;
+}
+
+.text-5 li{
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: .5px;
+}
+
+.text-7{
+    font-size: 1rem;
+    letter-spacing: .5px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+
+}
+
+.text-links {
+   margin-top: 3rem;
+    
+}
+
+.list-unstyled a:hover{
+    color: #65b9da;
+}
+.team{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.team h1{
+    margin-bottom: 5rem;
+}
+
+.team .col-lg-6{
+    margin-bottom: 1.5rem;
+    text-align: center;
+   
+}
+.team h2 {
+    font-weight: 400;
+    margin-top: 2rem;
+  }
+.team .col-lg-4 h4{
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+
+  .textsubject{
+    background: #ff7fe0;
+    padding: 4px 10px;
+    border-radius: 15px;
+    display: inline-block;
+  }
+
+  footer{
+      background: #65b9da;
+      border-radius: 5px;
+      
+      padding-bottom: 3rem;
+  }
+
+  footer .copyright,
+  footer .copyright a,
+  .social-media li a{
+    color: #f9f9f9;
+  }
+
+  .social-media{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+   
+  }
+
+  .reference{
+      margin-top: 5rem;
+  }
+  
+  #page_top{
+    width: 100px;
+    height: 60px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: #ef3f98;
+    opacity: 0.6;
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 60px;
+    text-decoration: none;
+  }
+  #page_top a::before{
+    font-family: FontAwesome;
+    content: '\f102';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -25px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+  #page_top a::after{
+    content: 'PAGE TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 650px) {
+    .social-media, iframe {
+      width: 100%;
+      display: block;
+    }
+    .overview{
+        display: none;
+    }
+    .p3{
+        font-size: 4rem;
+    }
+  }
+  
+  

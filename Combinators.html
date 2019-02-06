@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/style-simple.css">
+
+
+    <title>Combinators</title>
+</head>
+
+<body>
+    <!--Jumbotron-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Combinators and selector lists</h1>
+            <p class="lead">In our final article on selectors, we'll explore combinators and groups of selectors -- two
+                ways of combining multiple selectors together for further useful selection capabilities.</p>
+        </div>
+    </div>
+    <!--End Jumbotron-->
+
+    <!--section1-->
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Combinators and selector lists</li>
+            </ol>
+        </nav>
+
+        <div class="row bg-light">
+            <!--col1-->
+            <div class="col-lg-8 col-md-12 mt-5 ml-3 mb-5">
+                <div class="text1">
+                    <h2>Combinators and selector lists</h2>
+                    <p>Using one selector at a time is useful, but can be inefficient in some situations. CSS selectors
+                        become even more useful when you start combining them to perform fine-grained selections. CSS
+                        has several ways to select elements based on how they are related to one another. Those
+                        relationships are expressed with combinators as follows (A and B represent any selector seen
+                        above):</p>
+                </div>
+
+                <div class="table-responsive-md">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="bg-info">
+                                <th scope="col">Name</th>
+                                <th scope="col">Syntax</th>
+                                <th scope="col">Selects</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-info">
+                            <tr>
+                                <th scope="row">Selector list</th>
+                                <td>A, B</td>
+                                <td>Any element matching A and/or B (see Groups of selectors on one rule, below - Group
+                                    of Selectors is not considered to be a combinator).</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">Descendant combinator</th>
+                                <td>A B</td>
+                                <td>Any element matching B that is a descendant of an element matching A (that is, a
+                                    child, or a child of a child, etc.). the combinator is one or more spaces or dual
+                                    greater than signs.</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">Child combinator</th>
+                                <td>A > B</td>
+                                <td>Any element matching B that is a direct child of an element matching A.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Adjacent sibling combinator</th>
+                                <td>A + B</td>
+                                <td>Any element matching B that is the next sibling of an element matching A (that is,
+                                    the next child of the same parent).</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">General sibling combinator</th>
+                                <td>A ~ B</td>
+                                <td>Any element matching B that is one of the next siblings of an element matching A
+                                    (that is, one of the next children of the same parent).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        </div>
+
+                    <p>Let's look at an example with all of this working together:</p>
+                    <pre class="prettyprint">
+   <code class="lang-scm">
+   &lt;table lang="en-US" class="with-currency"&gt;
+    &lt;thead&gt;
+     &lt;tr&gt;
+        &lt;th scope="col"&gt;Product&lt;/th&gt;
+        &lt;th scope="col"&gt;Qty&lt;/th&gt;
+        &lt;th scope="col"&gt;Price&lt;/th&gt;
+       &lt;/tr&gt;
+     &lt;/thead&gt;
+    &lt;tfoot&gt;
+       &lt;tr&gt;
+          &lt;th colspan="2" scope="row"&gt;Total:&lt;/th&gt;
+          &lt;td&gt;148.55&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tfoot&gt;
+      &lt;tbody&gt;
+       &lt;tr&gt;
+           &lt;td&gt;Lawnchair&lt;/td&gt;
+           &lt;td&gt;1&lt;/td&gt;
+           &lt;td&gt;137.00&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;td&gt;Marshmallow rocr bar&lt;/td&gt;
+           &lt;td&gt;2&lt;/td&gt;
+           &lt;td&gt;10.45&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+</code>
+</pre>
+
+                    <p>Then, let's use the following style sheet:</p>
+                    <pre class="prettyprint">
+   <code class="lang-scm">
+   /* Basic table setup */
+   table {
+     font: 1em sans-serif;
+     border-collapse: collapse;
+     border-spacing: 0;
+    }
+           
+    /* All &lt;td&gt;s within a &lt;table&gt; and all &lt;th&gt;s within a &lt;table&gt;
+       Comma is not a combinator, it just allows you to target
+       several selectors with the same CSS ruleset */
+   table td, table th {
+       border : 1px solid black;
+       padding: 0.5em 0.5em 0.4em;
+    }
+           
+    /* All &lt;th&gt;s within &lt;thead&gt;s that are within &lt;table&gt;s */
+        table thead th {
+           color: white;
+           background: black;
+   }
+           
+   /* All &lt;td&gt;s preceded by another &lt;td&gt;,
+       within a &lt;tbody&gt;, within a &lt;table&gt;*/
+   table tbody td + td {
+       text-align: center;
+   }
+           
+    /* All &lt;td&gt;s that are a last child,
+        within a &lt;tbody&gt;, within a &lt;table&gt; */
+   table tbody td:last-child {
+    text-align: right
+   }
+           
+   /* All &lt;th&gt;s, within a &lt;tfoot&gt;s, within a &lt;table&gt; */
+   table tfoot th {
+       text-align: right;
+       border-top-width: 5px;
+       border-left: none;
+       border-bottom: none;
+   }
+           
+   /* All &lt;td&gt;s preceded by a &lt;th&gt;, within a &lt;table&gt; */
+   table th + td {
+       text-align: right;
+       border-top-width: 5px;
+       color: white;
+       background: black;
+   }
+           
+    /* All pseudo-elements "before" &lt;td&gt;s that are a last child,
+       appearing within elements with a class of "with-currency" that
+       also have an attribute "lang" with the value "en-US" */
+   .with-currency[lang="en-US"] td:last-child::before {
+       content: '$';
+   }
+           
+   /* All pseudo-elements "after" &lt;td&gt;s that are a last child,
+       appearing within elements with the class "with-currency" that
+       also have an attribute "lang" with the value "fr" */
+   .with-currency[lang="fr"] td:last-child::after {
+       content: ' EUR';
+   }
+   </code>
+</pre>
+
+                    <p>This has given us the following rather nice table styles:</p>
+                    <div class="img9">
+                        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="suree1988"
+                            data-slug-hash="pGWVJm" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+                            data-pen-title="pGWVJm">
+                            <span>See the Pen <a href="https://codepen.io/suree1988/pen/pGWVJm/">
+                                    pGWVJm</a> by Suree1988 (<a href="https://codepen.io/suree1988">@suree1988</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    </div>
+
+
+
+                    <div class="text3 ">
+                        <h2 class="mt-5 pb-2 font-weight-bold">Class selectorsGroups of selectors on one rule</h2>
+                        <p>You have seen multiple examples of this in action already, but let's spell it out for
+                            clarification. You can write groups of selectors separated by commas to apply the same rule
+                            to multiple sets of selected elements at once. For example:</p>
+
+
+                        <pre class="prettyprint">
+   <code class="lang-scm">
+           p, li {
+               font-size: 1.6em;
+             }
+   </code>
+</pre>
+
+                        <p>Or this:</p>
+                        <pre class="prettyprint">
+       <code class="lang-scm">
+    h1, h2, h3, h4, h5, h6 {
+        font-family: helvetica, 'sans serif';
+    }
+       </code>
+   </pre>
+                        <P class="mt-5 ">Ref: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors">https://developer.mozilla.org</a></P>
+                    </div>
+        </div>
+
+
+                    <!-- asidebar-->
+                    <aside>
+                        <section id="section-2" class="section-2">
+
+                            <div class="text-links">
+                                <div class="p-3">
+                                    <h4>overview</h4>
+                                    <ol class="list-unstyled mb-0">
+                                        <li><a href="./Simple-selectors.html">Simple selectors</a></li>
+                                        <li><a href="./Attribute-selectors.html">Attribute selectors</a></li>
+                                        <li><a href="./Pseudo-classes.html">Pseudo-classes and pseudo-elements</a></li>
+                                        <li><a href="./Combinators.html">Combinators and multiple selectors</a></li>
+                                    </ol>
+                                </div>
+                                <div class="another-link p-3">
+                                    <h4>Links</h4>
+                                    <ol class="list-unstyled">
+                                        <li><a href="https://www.w3schools.com/cssref/css_selectors.asp">w3schools</a></li>
+                                        <li><a href="http://htmldog.com/references/css/selectors/">htmldog</a></li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                        </section>
+                    </aside>
+                    <!-- END asidebar-->
+               
+        </div>
+
+    </div>
+
+    <!--End col1-->
+    <div id="page_top"><a href="#"></a></div>
+    <!--Footer-->
+    <footer class="footer">
+
+        <ul class="social-media text-center">
+            <li><a href="http://jigsaw.w3.org/css-validator/"><img src="https://img.icons8.com/color/96/000000/css3.png"></a></li>
+            <li><a href="https://validator.w3.org/#validate_by_upload"><img src="https://img.icons8.com/color/96/000000/html-5.png"></a></li>
+            <li><a href="https://getbootstrap.com/docs/4.2/getting-started/introduction/"><img src="https://img.icons8.com/color/96/000000/bootstrap.png"></a></li>
+        </ul>
+        <div class="copyright text-center">
+            2019 Fumie And Sureerat, Kvalitetssäkrare och testare inom IT
+        </div>
+
+    </footer>
+    <!--End footer-->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+
+</html>

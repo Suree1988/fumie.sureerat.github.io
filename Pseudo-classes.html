@@ -1,0 +1,276 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+    <link rel="stylesheet" href="./CSS/style-simple.css">
+
+    <title>Pseudo-classes and pseudoelements</title>
+  </head>
+  <body>
+      <!--Jumbotron-->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Pseudo-classes and pseudoelements</h1>
+          <p class="lead">In this, the third in our series of articles on selectors, we discuss pseudo-selectors. These don't select elements, but rather certain parts of elements, or elements only in certain contexts. They come in two main types: pseudo-classes and pseudo-elements.</p>
+        </div>
+      </div>
+      <!--End Jumbotron-->
+
+        <!--section1-->
+        <div class="container">
+                <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Pseudo-classes and pseudoelements</li>
+                        </ol>
+                      </nav>
+            <div class="row bg-light">
+                <!--col1-->
+                <div class="col-lg-8 col-md-12 mt-5 ml-3 mb-5">
+                    <div class="text1">
+                      <h2>Pseudo-classes</h2>  
+                     <p>A CSS pseudo-class is a keyword added to the end of a selector, preceded by a colon (:), which is used to specify that you want to style the selected element but only when it is in a certain state. For example, you might want to style a link element only when it is being hovered over by the mouse pointer, or a checkbox when it is disabled or checked, or an element that is the first child of its parent in the DOM tree.</p>
+
+                      <!--Row-->
+                        <div class="row mt-5 mb-5">
+                        <div class="col-md-4">
+                               
+                           <p>:active</p>
+                           <p>:checked</p>
+                           <p>:default</p>
+                           <p>:dir()</p>
+                           <p>:disabled</p>
+                           <p>:empty</p>
+                           <p>:first</p>
+                           <p>:first-child</p>
+                           <p>:first-of-type</p>
+                           <p>:fullscreen</p>
+                           <p>:focus</p>
+                           <p>:focus-within</p>
+                           <p>:hover</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>:indeterminate</p>
+                            <p>:in-range</p>
+                            <p>:invalid</p>
+                            <p>:lang()</p>
+                            <p>:last-child</p>
+                            <p>:last-of-type</p>
+                            <p>:left</p>
+                            <p>:link</p>
+                            <p>:matches()</p>
+                            <p>:not()</p>
+                            <p>:nth-child()</p>
+                            <p>:nth-last-child()</p>
+                            <p>:nth-last-of-type()</p>
+                            <p>:nth-of-type()</p>
+                        </div>
+                        <div class="col-md-4">
+                            
+                            <p>:only-child</p>
+                            <p>only-of-type</p>
+                            <p>:optional</p>
+                            <p>:out-of-range</p>
+                            <p>:read-only</p>
+                            <p>:read-write</p>
+                            <p>:required</p>
+                            <p>:right</p>
+                            <p>:root</p>
+                            <p>:scope</p>
+                            <p>:target</p>
+                            <p>:valid</p>
+                            <p>:visited</p>
+                        </div>
+                      </div>
+
+                      <!--End of row-->
+                      
+                      <p> We will not dig into every pseudo-class right now, it is not the objective of the Learning Area to teach you everything in exhaustive detail. You'll certainly come across some of these in more detail later, where appropriate.</p>
+                                   
+                        </div>
+
+                    <div class="text4">
+                        <p>For now, let's just see a simple example of how to use these. First, an HTML snippet:</p>
+<pre class="prettyprint">
+    <code class="lang-scm">
+    &lt;a href="https://developer.mozilla.org/"target="_blank"&gt; Mozilla Developer Network &lt;/a&gt;
+   
+</code>
+
+</pre>
+
+<p>Then, some CSS rules:</p>
+<pre class="prettyprint">
+    <code class="lang-scm">
+    /* These styles will style our link
+        in all states */
+    a {
+         color: blue;
+         font-weight: bold;
+    }
+         
+    /* We want visited links to be the same color
+        as non visited links */
+    a:visited {
+       color: blue;
+    }
+         
+    /* We highlight the link when it is
+       hovered over (mouse over), activated (mouse down)
+       or focused (keyboard) */
+     a:hover,
+     a:active,
+     a:focus {
+        color: darkred;
+        text-decoration: none;
+    }
+    </code>
+</pre>
+
+<p>Now let's play with the link we just styled!</p>
+<div class="img7">
+    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="suree1988" data-slug-hash="pGWVJm" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="pGWVJm">
+        <span>See the Pen <a href="https://codepen.io/suree1988/pen/pGWVJm/">
+        pGWVJm</a> by Suree1988 (<a href="https://codepen.io/suree1988">@suree1988</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+
+                    </div>
+<div class="text3 ">
+    <h2 class="mt-5 pb-2 font-weight-bold">pseudo-elements</h2>
+    <p>Pseudo-elements are very much like pseudo-classes, but they have differences. They are keywords, this time preceded by two colons (::), that can be added to the end of selectors to select a certain part of an element.
+      <ul>
+          <li>::after</li>
+          <li>::before</li>
+          <li>::first-letter</li>
+          <li>::first-line</li>
+          <li>::selection</li>
+          <li>::backdrop</li>
+
+      </ul>
+      <p>They all have some very specific behaviors and interesting features, but digging into them all in detail is beyond our scope for now.</p>
+      <br>
+        
+        <p>Here we'll just show a simple CSS example that selects the space just after all absolute links and adds an arrow in that space:</p>
+
+    <pre class="prettyprint">
+    <code class="lang-scm">
+     &lt;ul&gt; 
+      &lt;li&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS"&gt;CSS &lt;/a&gt;defined in the MDN glossary.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML"&gt;HTML &lt;/a&gt;defined in the MDN glossary.&lt;/li&gt;
+     &lt;ul&gt;          
+         </code>
+    </pre>
+
+    <p>Let's add this CSS rule:</p>
+
+        <pre class="prettyprint">
+    <code class="lang-scm">
+     /* All elements with an attribute "href" with values
+         starting with "http" will have an arrow added after their
+         content (to indicate they are external links) */
+     [href^=http]::after {
+        content: '⤴';
+         }
+        
+    </code>
+</pre>
+
+<p>We get this result:</p>
+<div class="img-8">
+    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="suree1988" data-slug-hash="pGWVJm" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="pGWVJm">
+        <span>See the Pen <a href="https://codepen.io/suree1988/pen/pGWVJm/">
+        pGWVJm</a> by Suree1988 (<a href="https://codepen.io/suree1988">@suree1988</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div>
+<P class="mt-5 ">Ref: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements">https://developer.mozilla.org</a></P> 
+</div>    
+    </div>
+ <!-- asidebar-->
+ <aside>
+        <section id="section-2" class="section-2">
+            
+                <div class="text-links">
+                     <div class="p-3">
+                         <h4>overview</h4>
+                         <ol class="list-unstyled mb-0">
+                                <li><a href="./Simple-selectors.html">Simple selectors</a></li>
+                                <li><a href="./Attribute-selectors.html">Attribute selectors</a></li>
+                                <li><a href="./Pseudo-classes.html">Pseudo-classes and pseudo-elements</a></li>
+                                <li><a href="./Combinators.html">Combinators and multiple selectors</a></li>
+                         </ol>
+                     </div>
+                     <div class="another-link p-3">
+                         <h4>Links</h4>
+                         <ol class="list-unstyled">
+                             <li><a href="https://www.w3schools.com/cssref/css_selectors.asp">w3schools</a></li>
+                             <li><a href="http://htmldog.com/references/css/selectors/">htmldog</a></li>
+                         </ol>
+                     </div>
+                 </div>
+                 
+             </section>
+            </aside>
+             <!-- END asidebar-->
+
+    </div>
+    
+</div>
+
+<!--End col1-->
+
+
+        
+               
+                </div>
+                
+            </div>
+
+            <div id="page_top"><a href="#"></a></div>
+
+            <!--Footer-->
+
+        <footer class="footer">
+
+        <ul class="social-media text-center">
+                <li><a href="http://jigsaw.w3.org/css-validator/"><img src="https://img.icons8.com/color/96/000000/css3.png" alt="icon1"></a></li>
+                <li><a href="https://validator.w3.org/#validate_by_upload"><img src="https://img.icons8.com/color/96/000000/html-5.png" alt="icon2"></a></li>
+                <li><a href="https://getbootstrap.com/docs/4.2/getting-started/introduction/" ><img src="https://img.icons8.com/color/96/000000/bootstrap.png" alt="icon3"></a></li> 
+        </ul>
+    <div class="copyright text-center">
+        2019 Fumie And Sureerat, Kvalitetssäkrare och testare inom IT
+    </div>
+
+</footer>
+<!--End footer-->
+        
+        <!--End section1-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  </body>
+</html>

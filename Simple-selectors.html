@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+    <link rel="stylesheet" href="./CSS/style-simple.css">
+
+    <title>Simple Selectors</title>
+  </head>
+  <body>
+      <!--Jumbotron-->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Simple selectors</h1>
+          <p class="lead">In this, our first selectors article, we'll learn about "simple" selectors. They directly match one or more elements of a document, based on the type of element, class, or id.</p>
+        </div>
+      </div>
+      <!--End Jumbotron-->
+
+        <!--section1-->
+        <div class="container">
+                <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Simple selectors</li>
+                        </ol>
+                      </nav>
+
+            <div class="row bg-light">
+                <!--col1-->
+                <div class="col-lg-8 col-md-12 mt-5 ml-3 mb-5">
+                    <div class="text1">
+                      <h2>Type selectors aka element selectors</h2>  
+                      <p>This selector is just a case-insensitive match between the selector name and a given HTML element name. This is the simplest way to target all elements of a given type. Let's take a look at an example:</p>
+                    </div>
+                    <div class="text2">
+                        <p>Here is some HTML:</p>
+<pre class="prettyprint">
+    <code class="lang-scm">
+    &lt;p&gt;What color do you like? &lt;/p&gt;
+    &lt;div&gt;I like blue.&lt;/div&gt;
+    &lt;p&gt;I prefer BLACK!&lt;/p&gt;
+    </code>
+</pre>
+
+<p>A simple style sheet:</p>
+<pre class="prettyprint">
+    <code class="lang-scm">
+    /* All p elements are red */
+    p {
+        color: red;
+    }
+            
+    /* All div elements are blue */
+    div {
+        color: blue;
+    }
+    </code>
+</pre>
+
+<p>And we get this:</p>
+<div class="img1">
+    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="suree1988" data-slug-hash="LqzweL" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="LqzweL">
+        <span>See the Pen <a href="https://codepen.io/suree1988/pen/LqzweL/">
+        LqzweL</a> by Suree1988 (<a href="https://codepen.io/suree1988">@suree1988</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+
+                    </div>
+<div class="text3 ">
+    <h2 class="mt-5 pb-2 font-weight-bold">Class selectors</h2>
+    <p>The class selector consists of a dot, '.', followed by a class name. A class name is any value, without spaces, placed within an HTML class attribute. It is up to you to choose a name for the class. It is also noteworthy that multiple elements in a document can have the same class value, and a single element can have multiple class names separated by white space. Here's a quick example:</p>
+    
+    <div class="text4">
+        <p>Here is some HTML:</p>
+
+<pre class="prettyprint">
+    <code class="lang-scm">
+    &lt;ul&gt;
+        &lt;li class="first done"&gt;Create an HTML document&lt;/li&gt;
+        &lt;li class="second done"&gt;Create a CSS style sheet&lt;/li&gt;
+        &lt;li class="third"&gt;Link them all together&lt;/li&gt;
+    &lt;ul&gt;
+    </code>
+</pre>
+<p>A simple style sheet:</p>
+<pre class="prettyprint">
+        <code class="lang-scm">
+    /* The element with the class "first" is bolded */
+    .first {
+    font-weight: bold;
+    }
+                
+    /* All the elements with the class "done" are strikethrough */
+    .done {
+        text-decoration: line-through;
+    }
+        </code>
+    </pre>
+<p>And we get this result:</p>
+<div class="img-2">
+    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="suree1988" data-slug-hash="xMXvXR" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="xMXvXR">
+        <span>See the Pen <a href="https://codepen.io/suree1988/pen/xMXvXR/">
+        xMXvXR</a> by Suree1988 (<a href="https://codepen.io/suree1988">@suree1988</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div>
+    </div>
+</div>
+
+
+<div class="text-5">
+    <h2 class="mt-5 pb-2 font-weight-bold">ID selectors</h2>
+    <p>The ID selector consists of a hash/pound symbol (#), followed by the ID name of a given element. Any element can have a unique ID name set with the id attribute. It is up to you to choose an ID name. It's the most efficient way to select a single element.</p>
+
+    <div class="text-6">
+<p>Let's look at a quick example — here is some HTML:</p>
+
+<pre class="prettyprint">
+    <code class="lang-scm">
+    &lt;p id="polite"&gt;— "Good morning."&lt;/p&gt;
+    &lt;id="rude"&gt; — "Go away!"&lt;/p&gt;
+    </code>
+</pre>
+
+<p>A simple style sheet:</p>
+<pre class="prettyprint">
+        <code class="lang-scm">
+    #polite {
+        font-family: cursive;
+    }
+                  
+    #rude {
+        font-family: monospace;
+        text-transform: uppercase;
+    }
+        </code>
+    </pre>
+
+    <p>And we get this as an output:</p>
+    <div class="img-3">
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="suree1988" data-slug-hash="VgMoWM" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="VgMoWM">
+            <span>See the Pen <a href="https://codepen.io/suree1988/pen/VgMoWM/">
+            VgMoWM</a> by Suree1988 (<a href="https://codepen.io/suree1988">@suree1988</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    </div>
+
+    </div>
+</div>
+                
+<div class="text-7">
+                    <h2 class="mt-5 pb-2 font-weight-bold">Universal selector</h2>
+                    <p>The universal selector (*) is the ultimate joker. It allows selecting all elements on a page. As it is rarely used to apply a style to every element on a page, it is often used in combination with other selectors</p>
+<div class="text-8">
+<p>Now for an example; first some HTML:</p>
+<pre class="prettyprint">
+    <code class="lang-scm">
+    &lt;div&gt;
+        &lt;p&gt;I think the containing box just needed
+        a &lt;strong&gt;border&lt;/strong&gt; or &lt;em&gt;something&lt;/em&gt;,
+        but this is getting &lt;strong&gt;out of hand&lt;/strong&gt;!&lt;/p&gt;
+    &lt;/div&gt;
+    </code>
+</pre>
+<p>And a simple style sheet:</p>
+<pre class="prettyprint">
+        <code class="lang-scm">
+    * {
+        padding: 5px;
+        border: 1px solid black;
+        background: rgba(255,0,0,0.25)
+    }
+        </code>
+    </pre>
+    <p>Together, these give the following result:</p>
+    <div class="img-4">
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="suree1988" data-slug-hash="RvLXMy" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="RvLXMy">
+            <span>See the Pen <a href="https://codepen.io/suree1988/pen/RvLXMy/">
+            RvLXMy</a> by Suree1988 (<a href="https://codepen.io/suree1988">@suree1988</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    </div>
+</div>
+
+<P class="mt-5 ">Ref: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors">https://developer.mozilla.org</a></P> 
+                </div>    
+                    </div>
+                    <!--End col1-->
+
+
+                   
+                   <!-- asidebar-->
+        <aside>
+        <section id="section-2" class="section-2">
+            
+                <div class="text-links">
+                     <div class="p-3">
+                         <h4>overview</h4>
+                         <ol class="list-unstyled mb-0">
+                            <li><a href="./Simple-selectors.html">Simple selectors</a></li>
+                            <li><a href="./Attribute-selectors.html">Attribute selectors</a></li>
+                            <li><a href="./Pseudo-classes.html">Pseudo-classes and pseudo-elements</a></li>
+                            <li><a href="./Combinators.html">Combinators and multiple selectors</a></li>
+                         </ol>
+                     </div>
+                     <div class="another-link p-3">
+                         <h4>Links</h4>
+                         <ol class="list-unstyled">
+                             <li><a href="https://www.w3schools.com/cssref/css_selectors.asp">w3schools</a></li>
+                             <li><a href="http://htmldog.com/references/css/selectors/">htmldog</a></li>
+                         </ol>
+                     </div>
+                 </div>
+                 
+             </section>
+            </aside>
+             <!-- END asidebar-->
+               
+                </div>
+                
+            </div>
+
+            <div id="page_top"><a href="#"></a></div>
+
+            <!--Footer-->
+        <footer class="footer">
+
+        <ul class="social-media text-center">
+                <li><a href="http://jigsaw.w3.org/css-validator/"><img src="https://img.icons8.com/color/96/000000/css3.png" alt="icon1"></a></li>
+                <li><a href="https://validator.w3.org/#validate_by_upload"><img src="https://img.icons8.com/color/96/000000/html-5.png" alt="icon2"></a></li>
+                <li><a href="https://getbootstrap.com/docs/4.2/getting-started/introduction/" ><img src="https://img.icons8.com/color/96/000000/bootstrap.png" alt="icon3"></a></li> 
+        </ul>
+    <div class="copyright text-center">
+        2019 Fumie And Sureerat, Kvalitetssäkrare och testare inom IT
+    </div>
+
+</footer>
+<!--End footer-->
+        
+        <!--End section1-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  </body>
+</html>

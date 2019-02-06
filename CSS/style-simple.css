@@ -176,7 +176,13 @@ footer .copyright a,
     display: block;
   }
   
-  
+  body {
+        overflow-x: hidden;
+    }
+    .container {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
 }
 
 

@@ -1,12 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-danger shadow-sm mb-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-danger shadow-sm ">
   <a class="navbar-brand d-none d-md-block" href="<?php echo URLROOT; ?>"><i class="fas fa-boxes fa-2x d-inline-block align-top"></i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="<?php echo URLROOT; ?>">Home</a>
       </li>
       <li class="nav-item">
@@ -24,7 +23,7 @@
         <a class="nav-link font-weight-normal" href="<?php echo URLROOT; ?>/customers/register">FREE Register with us!</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo URLROOT; ?>/customers/signin"><span class="mr-1">Sign In</span><i class="fas fa-sign-in-alt fa-w-16 fa-fw fa-lg"></i></a>
+        <a class="nav-link" href="<?php echo URLROOT; ?>/customers/signin"><span class="mr-1"></i>Sign In</span><i class="fas fa-sign-in-alt fa-w-16 fa-fw fa-lg"></i></a>
       </li>
   <?php endif; ?>
     </ul>
